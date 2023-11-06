@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Host=l8p8-dev.cmqf7r5tibzr.us-west-2.rds.amazonaws.com;Port=5432;Database=l8p8;User Id=poweruser;Password=weGOTthepower*1;" Npgsql.EntityFrameworkCore.PostgreSQL -o DataModels
