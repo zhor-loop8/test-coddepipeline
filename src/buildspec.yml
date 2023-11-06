@@ -20,6 +20,7 @@ build:
       - echo Build started on `date`
       - dotnet build -c Release
 
+
 post_build:
     commands:
       - echo Publish started on `date`
