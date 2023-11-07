@@ -13,12 +13,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build -c Release .src/WebAPI.csproj
+      - dotnet build -c Release ./src/WebAPI.csproj
 
   post_build:
     commands:
       - echo Publish started on `date`
-      - dotnet publish -c Release .src/WebAPI.csproj
+      - dotnet publish -c Release ./src/WebAPI.csproj
 
 artifacts:
   files:
