@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - echo ${CODEBUILD_SRC_DIR}
-      - dotnet restore WebAPI.csproj
+      - dotnet restore ./src/WebAPI.csproj
 
   build:
     commands:
