@@ -1,31 +1,29 @@
 ﻿version: 0.1
 
 env:
-variables: 
+variables:
 PROJECT: lsdkdl
-DOTNET_CORE_RUNTIME: 6.0
 
 phases:
-    install:
-        runtime-versions:
-        dotnet: ${DOTNET_CORE_RUNTIME}
+  install:
+    runtime-versions:
+      dotnet: 6.0
 
-pre_build: 
-    commands:
-      - echo Restore started on `date`
-      - dotnet restore
+pre_build:
+  commands:
+    - echo Restore started on `date`
+    - dotnet restore
 
 build:
-    commands:
-      - echo Build started on `date`
-      - dotnet build -c Release
-
+  commands:
+    - echo Build started on `date`
+    - dotnet build -c Release
 
 post_build:
-    commands:
-      - echo Publish started on `date`
-      - dotnet publish -c Release -o ./publish
+  commands:
+    - echo Publish started on `date`
+    - dotnet publish -c Release -o ./publish
 
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
