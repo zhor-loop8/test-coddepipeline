@@ -5,21 +5,21 @@ phases:
     runtime-versions:
       dotnet: 6.0
 
-pre_build:
-  commands:
-    - echo Restore started on `date`
-    - dotnet restore
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore
 
-build:
-  commands:
-    - echo Build started on `date`
-    - dotnet build -c Release
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet build -c Release
 
-post_build:
-  commands:
-    - echo Publish started on `date`
-    - dotnet publish -c Release -o ./publish
+  post_build:
+    commands:
+      - echo Publish started on `date`
+      - dotnet publish -c Release -o ./publish
 
-artifacts:
-  files:
-    - "**/*"
+  artifacts:
+    files:
+      - "**/*"
