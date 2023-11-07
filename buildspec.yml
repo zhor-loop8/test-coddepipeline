@@ -20,6 +20,6 @@ phases:
       - echo Publish started on `date`
       - dotnet publish -c Release -o ./publish
 
-  artifacts:
-    files:
-      - "**/*"
+artifacts:
+  files:
+    - "**/*"
