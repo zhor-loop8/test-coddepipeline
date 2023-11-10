@@ -13,8 +13,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c Release ./src/WebAPI.csproj
+      - dotnet publish -c Release -o ./publish_output ./src/WebAPI.csproj
 
 artifacts:
   files:
     - "**/*"
+  base-directory: ./publish_output
+  discard-paths: no
