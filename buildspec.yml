@@ -13,7 +13,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c Release -o ./publish_output ./src/WebAPI.csproj --self-contained
+      - dotnet publish -o ./publish_output -c Release  ./src/WebAPI.csproj --self-contained
 
 artifacts:
   files:
